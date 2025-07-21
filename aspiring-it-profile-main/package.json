@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://Vanaiyalini.github.io/Portfolio",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -83,6 +82,7 @@
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-plugin-static-copy": "^3.1.1"
   }
 }
