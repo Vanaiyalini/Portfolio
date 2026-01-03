@@ -123,8 +123,8 @@ const root = document.documentElement;
   document.getElementById('cvBtn').addEventListener('click', function(e) {
   e.preventDefault();
   const link = document.createElement('a');
-  link.href = 'assets/Pirakash_CV.pdf';
-  link.download = 'Pirakash_CV.pdf';
+  link.href = 'assets/Vanaiyalini_Kirupagaran_Resume.pdf';
+  link.download = 'Vanaiyalini_Kirupagaran_Resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
