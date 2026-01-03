@@ -369,33 +369,5 @@ document.addEventListener("keydown", e => {
 });
 
 
-// CV Preview & Download
-const cvBtn = document.getElementById('cvBtn');
-const cvUrl = 'assets/Vanaiyalini_Kirupagaran_Resume.pdf';
-
-cvBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  // 1. Open PDF in a new tab for preview
-  const previewWindow = window.open(cvUrl, '_blank');
-
-  // Optional: Ask user if they want to download after preview
-  if (previewWindow) {
-    // Wait 1s to ensure PDF loads, then ask
-    setTimeout(() => {
-      const download = confirm('Do you want to download the CV?');
-      if (download) {
-        const link = document.createElement('a');
-        link.href = cvUrl;
-        link.download = 'Vanaiyalini_Kirupagaran_Resume.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-    }, 1000);
-  }
-});
-
-
 
 
