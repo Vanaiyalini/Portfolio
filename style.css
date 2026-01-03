@@ -2281,8 +2281,8 @@ textarea {
 
 .about-photo-frame {
   position: relative;
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 300px;
   border-radius: 26px;
   padding: 4px;
   background: var(--bg-soft);
