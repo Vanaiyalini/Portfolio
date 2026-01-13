@@ -1,736 +1,475 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Software Engineer Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Vanaiyalini Kirupagaran | Software Engineer</title>
+
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Elegant editorial font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="scroll-progress">
-        <div class="scroll-progress-bar"></div>
-    </div>
-    <div class="bg-shapes">
-      <div class="middle-shape"></div>
-      <div class="bg-blob-layer"></div>
-    </div>
 
-
-<!-- Header / Navbar -->
-<header class="site-header">
-  <nav class="nav">
-    <div class="nav-left">
-      <a href="#hero" class="logo">Vanaiyalini Kirupagaran</a>
-    </div>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- 🔘 Theme toggle -->
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-toggle-icon" id="theme-toggle-icon">🌙</span>
-      </button>
-
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-</header>
-
-
-
-
-<main>
-
- <!-- ===== RUNNING ANNOUNCEMENT BANNER ===== -->
-<div class="announcement-banner reveal">
-  <div class="announcement-inner sonoma-glass">
-    <div class="banner-track sonoma-track">
-      <span>⚙️ Full-Stack Software Engineer</span>
-      <span>🚀 React • Node.js • MongoDB • REST APIs</span>
-      <span>🧠 Clean architecture & scalable systems</span>
-      <span>⚡ Performance-focused, production-ready code</span>
-
-      <span>⚙️ Full-Stack Software Engineer</span>
-      <span>🚀 React • Node.js • MongoDB • REST APIs</span>
-      <span>🧠 Clean architecture & scalable systems</span>
-      <span>⚡ Performance-focused, production-ready code</span>
-    </div>
-  </div>
-</div>
-
-
-    <!-- HERO -->
-    <section id="hero" class="hero">
-       
-  <div class="hero-content reveal">
-    <p class="eyebrow">SOFTWARE ENGINEER</p>
-    <h1>Building scalable, reliable digital systems.</h1>
-    <p class="hero-text">
-      I develop full-stack web applications with clean architecture,
-      strong performance, and real-world impact using modern technologies.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-ghost">Contact</a>
-      <a href="assets/Vanaiyalini_Kirupagaran_Resume.pdf" download class="cv-neon" id="cvBtn">
-        <i class="fa-solid fa-file-arrow-down"></i> Download CV
-      </a>
-    </div>
+  <!-- Soft page aura -->
+  <div class="aura" aria-hidden="true">
+    <span class="a1"></span>
+    <span class="a2"></span>
+    <span class="a3"></span>
   </div>
 
-  <div class="hero-visual reveal">
-    <div class="hero-orbit">
+  <!-- Top bar (like the video) -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#hero">Yalini</a>
 
-      <!-- 4 floating glass chips -->
-      <div class="hero-chip chip-1">
-        <span class="chip-label">Stack</span>
-        <span class="chip-title">MERN</span>
-      </div>
-
-      <div class="hero-chip chip-2">
-        <span class="chip-label">Focus</span>
-        <span class="chip-title">Clean Code</span>
-      </div>
-
-      <div class="hero-chip chip-3">
-        <span class="chip-label">Experience</span>
-        <span class="chip-title">Projects</span>
-      </div>
-
-      <div class="hero-chip chip-4">
-        <span class="chip-label">Currently</span>
-        <span class="chip-title">Building Systems</span>
-      </div>
-
-      <!-- Main hero card -->
-      <div class="hero-card">
-        <div class="hero-mockup-header">
-          <span></span><span></span><span></span>
+      <div class="topbar-right">
+        <div class="theme-pill" role="group" aria-label="Theme">
+          <button class="theme-btn" data-theme="light" type="button">Light</button>
+          <button class="theme-btn" data-theme="dark" type="button">Dark</button>
+          <button class="theme-btn" data-theme="auto" type="button">Auto</button>
         </div>
 
-        <div class="hero-mockup-body">
-          <div class="hero-mockup-sidebar">
-            <div class="pill"></div>
-            <div class="pill pill-light"></div>
-            <div class="pill pill-light"></div>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuPanel">
+          Menu <span class="menu-ico" aria-hidden="true">≡</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu panel (editorial overlay) -->
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="wrap menu-inner">
+      <div class="menu-grid">
+        <div>
+          <p class="menu-kicker">Sections</p>
+          <nav class="menu-links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="menu-kicker">Profile</p>
+          <div class="menu-meta">
+            <p class="menu-name">Vanaiyalini Kirupagaran</p>
+            <p class="menu-role">Full-Stack Software Engineer</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="menu-kicker">Elsewhere</p>
+          <div class="menu-links">
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/vanaiyalini-kirupagaran-743923269/">LinkedIn</a>
+            <a target="_blank" rel="noopener" href="https://github.com/Vanaiyalini">GitHub</a>
+            <a href="assets/Vanaiyalini_Kirupagaran_Resume.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-footer">
+        <span>© 2026 Vanaiyalini Kirupagaran</span>
+        <span class="dot-sep">•</span>
+        <span>Designed in an editorial style</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- HERO (magazine cover feel) -->
+    <section id="hero" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-media reveal">
+          <!-- Replace if needed -->
+          <img src="assets/Profile.jpg" alt="Vanaiyalini Kirupagaran" />
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="kicker">SOFTWARE ENGINEER</p>
+          <h1 class="headline">
+            Building scalable, reliable digital systems.
+          </h1>
+
+          <p class="lede">
+            I develop full-stack web applications with clean architecture,
+            strong performance, and real-world impact using modern technologies.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#work">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+            <a class="btn soft" href="assets/Vanaiyalini_Kirupagaran_Resume.pdf" download>Download CV</a>
           </div>
 
-          <div class="hero-mockup-main">
-            <div class="hero-block large">
-              <div class="message-to-client">
-                <h5>DEPLOYING SCALABLE APPLICATIONS 🚀</h5>
+          <div class="hero-strip">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>REST APIs</span>
+            <span>Spring Boot</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial tabs row (like categories in video) -->
+    <section class="tabs">
+      <div class="wrap">
+        <div class="tab-row" id="tabRow" aria-label="Sections horizontal tabs">
+          <button class="tab active" data-jump="#work">ALL</button>
+          <button class="tab" data-jump="#about">ABOUT</button>
+          <button class="tab" data-jump="#work">WORK</button>
+          <button class="tab" data-jump="#gallery">GALLERY</button>
+          <button class="tab" data-jump="#skills">SKILLS</button>
+          <button class="tab" data-jump="#contact">CONTACT</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>About</h2>
+          <p>
+            Bridging software engineering with intuitive design.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <div class="info-card">
+              <p class="info-title">Vanaiyalini Kirupagaran</p>
+              <p class="info-sub">Software Engineering Undergraduate</p>
+              <div class="info-lines">
+                <span>Full-Stack • UI/UX • Problem-Solver</span>
+                <span>MERN • Java • Spring Boot • Android</span>
+              </div>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat">
+                <div class="stat-num">10+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">6+</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">∞</div>
+                <div class="stat-label">Learning</div>
               </div>
             </div>
           </div>
 
-          <div class="hero-block"></div>
-          <div class="hero-block"></div>
-          <div class="hero-block small"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-
-
-  <!-- HIGHLIGHT STRIP -->
-    <section class="strip">
-  <div class="strip-item reveal">
-    <h3>3+ Years</h3>
-    <p>Hands-on experience building real-world software projects.</p>
-  </div>
-
-  <div class="strip-item reveal">
-    <h3>Tech Stack</h3>
-    <p>React, Node.js, Express, MongoDB, REST APIs.</p>
-  </div>
-
-  <div class="strip-item reveal">
-    <h3>Focus</h3>
-    <p>Scalable web apps, backend systems, and clean architecture.</p>
-  </div>
-</section>
-
-
-    <section id="gallery" class="gallery-section">
-    <!-- subtle aura blobs -->
-    <div class="bg-orbs" aria-hidden="true">
-      <span class="orb orb-1"></span>
-      <span class="orb orb-2"></span>
-      <span class="orb orb-3"></span>
-      <span class="orb orb-4"></span>
-    </div>
-
-    <div class="container">
-      <header class="gallery-header reveal">
-        <h2 class="gallery-title">
-          My <span>Design</span> Creations
-        </h2>
-
-         <div class="gallery-filters glass glass-soft" role="tablist" aria-label="Gallery categories">
-          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="filter-btn" data-filter="wedding" role="tab" aria-selected="false">UI & UX Designs</button>
-          <button class="filter-btn" data-filter="birthday" role="tab" aria-selected="false">Web Designs</button>
-        </div>
-      </header>
-
-      <div class="gallery-grid" id="galleryGrid">
-
-        <!-- Replace image src with your own files -->
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Home-page.png" alt="UI & UX Designs 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Login-or-Registration-page.png" alt="Wedding 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/w5.png" alt="Shoot 2" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Onboarding-Page.png" alt="Wedding 2" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Pet-Adoption-page.png" alt="Shoot 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/w6.png" alt="Shoot 2" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Registration-page.png" alt="Birthday 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/eventManagement.png" alt="Portrait 2" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/h2.png" alt="Shoot 2" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/h3.png" alt="Portrait 3" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/h4.png" alt="Wedding 3" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/hospitalManagement.png" alt="Birthday 2" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/w2.png" alt="Shoot 3" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Appointment.png" alt="Shoot 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Homepage.png" alt="Shoot 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Login.png" alt="Shoot 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/MedicalRecords.png" alt="Shoot 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="wedding">
-          <img src="assets/UI & UX Design/Profilepage.png" alt="Shoot 1" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/w3.png" alt="Portrait 4" loading="lazy" />
-        </figure>
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/w4.png" alt="Wedding 4" loading="lazy" />
-        </figure>
-
-
-        <figure class="gallery-item reveal" data-category="birthday">
-          <img src="assets/Website design/wastageManagement.png" alt="Birthday 3" loading="lazy" />
-        </figure>
-
-        
-
-<!-- 🔳 END EXTRA SQUARE IMAGES -->
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 📌 Apple-Style Lightbox -->
-<div id="lightbox" class="lightbox">
-  <div class="lightbox-content">
-    <img id="lightbox-img" src="" alt="Preview" />
-  </div>
-</div>
-
-    <!-- WORK / CASE STUDIES -->
-    <section id="work" class="section section-work">
-  <div class="section-header reveal">
-    <h2>Selected Projects</h2>
-    <p>Projects showcasing my software engineering skills across web, mobile, and full-stack development.</p>
-  </div>
-
-  <!-- Project 01 -->
-  <article class="case-study reveal">
-    <div class="case-visual gradient-one"></div>
-    <div class="case-content">
-      <h3>Online Auction Platform</h3>
-      <p>Full-featured web platform enabling product bidding and selling with secure user authentication and intuitive UI.</p>
-      <ul class="tags">
-        <li>PHP</li>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <a href="https://auction-six-eosin.vercel.app/" class="case-link">Live Site →</a>
-      <a href="https://github.com/Vanaiyalini/auction" class="case-link">GitHub →</a>
-    </div>
-  </article>
-
-  <!-- Project 02 -->
-  <article class="case-study reverse reveal">
-    <div class="case-visual gradient-two"></div>
-    <div class="case-content">
-      <h3>Event Management System</h3>
-      <p>Dynamic web application for event creation, booking management, and portfolio showcasing using Java technologies.</p>
-      <ul class="tags">
-        <li>Java</li>
-        <li>JSP/Servlets</li>
-      </ul>
-      <a href="https://github.com/Vanaiyalini/EventManagement-project" class="case-link">GitHub →</a>
-    </div>
-  </article>
-
-  <!-- Project 03 -->
-  <article class="case-study reveal">
-    <div class="case-visual gradient-three"></div>
-    <div class="case-content">
-      <h3>Hospital Management System</h3>
-      <p>Full-stack MERN application for patient, doctor, billing, and support management with secure authentication and payment integration.</p>
-      <ul class="tags">
-        <li>MongoDB</li>
-        <li>Express.js</li>
-        <li>React.js</li>
-        <li>Node.js</li>
-      </ul>
-      <a href="https://hospitalsusyemitp.vercel.app/" class="case-link">Live Site →</a>
-      <a href="https://github.com/Vanaiyalini/ITP" class="case-link">GitHub →</a>
-    </div>
-  </article>
-
-  <!-- Project 04 -->
-  <article class="case-study reverse reveal">
-    <div class="case-visual gradient-four"></div>
-    <div class="case-content">
-      <h3>Finance Tracker App</h3>
-      <p>Mobile app to track income, expenses, and monthly budgets with local SQLite storage and user-friendly interfaces.</p>
-      <ul class="tags">
-        <li>Android Studio</li>
-        <li>SQLite</li>
-      </ul>
-    </div>
-  </article>
-
-  <!-- Project 05 -->
-  <article class="case-study reveal">
-    <div class="case-visual gradient-five"></div>
-    <div class="case-content">
-      <h3>Pet Adoption Shop</h3>
-      <p>UI/UX prototype and Android implementation for pet adoption with intuitive navigation and functional screens.</p>
-      <ul class="tags">
-        <li>Figma</li>
-        <li>Android Studio (XML)</li>
-      </ul>
-      <a href="https://www.figma.com/design/lM5wVnTXXVM2e6QxPfxSIA/PawPal?node-id=0-1&p=f" class="case-link">Live Site →</a>
-    </div>
-  </article>
-
-  <!-- Project 06 -->
-  <article class="case-study reverse reveal">
-    <div class="case-visual gradient-six"></div>
-    <div class="case-content">
-      <h3>Task Management App</h3>
-      <p>Full-stack task management application with CRUD functionality, task prioritization, and responsive React UI.</p>
-      <ul class="tags">
-        <li>MongoDB</li>
-        <li>Express.js</li>
-        <li>React.js</li>
-        <li>Node.js</li>
-      </ul>
-      <a href="https://tasktrail-ten.vercel.app/" class="case-link">Live Site →</a>
-      <a href="https://github.com/Vanaiyalini/TaskTrail" class="case-link">GitHub →</a>
-    </div>
-  </article>
-
-  <!-- Project 07 -->
-  <article class="case-study reveal">
-    <div class="case-visual gradient-seven"></div>
-    <div class="case-content">
-      <h3>Smart Wastage Management System</h3>
-      <p>Web-based system for waste collection and tracking with real-time data processing, automated notifications, and payment gateway integration.</p>
-      <ul class="tags">
-        <li>Spring Boot</li>
-        <li>React.js</li>
-        <li>Payment Integration</li>
-      </ul>
-      <a href="https://wastagemanagementsystem.vercel.app/" class="case-link">Live Site →</a>
-      <a href="https://github.com/Vanaiyalini/WastageManagementSystem" class="case-link">GitHub →</a>
-    </div>
-  </article>
-</section>
-
-
-
-    <!-- PROCESS -->
-    <section id="process" class="section section-process">
-  <div class="section-header reveal">
-    <h2>How I Design</h2>
-    <p>A structured process that keeps teams aligned and users at the center.</p>
-  </div>
-
-  <div class="process-grid">
-    <!-- Step 1 -->
-    <div class="process-step reveal">
-      <div class="step-icon">1</div>
-      <h3>Discover</h3>
-      <p>Conduct workshops and research to understand goals, constraints, and user needs.</p>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="process-step reveal">
-      <div class="step-icon">2</div>
-      <h3>Define</h3>
-      <p>Create clear problem statements, map user journeys, and set success metrics.</p>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="process-step reveal">
-      <div class="step-icon">3</div>
-      <h3>Design</h3>
-      <p>Translate concepts into wireframes, interactive prototypes, and polished UI visuals.</p>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="process-step reveal">
-      <div class="step-icon">4</div>
-      <h3>Deliver</h3>
-      <p>Provide detailed specs, collaborate with developers, and refine post-launch.</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-    <!---ABOUT--->
-
-   <section id="about" class="section section-about">
-  <div class="about-inner">
-
-    <!-- LEFT: PHOTO + BADGES -->
-    <div class="about-media reveal">
-      <div class="about-photo-frame">
-        <img src="assets/Profile.jpg" alt="Profile photo of Vanaiyalini Kirupagaran" class="profile-img" />
-
-        <span class="about-pill about-pill-primary">
-          <i class="fa-solid fa-laptop-code"></i>
-          Software Engineering Undergraduate
-        </span>
-
-        <span class="about-pill about-pill-secondary">
-          <i class="fa-solid fa-lightbulb"></i>
-          Full-Stack • UI/UX • Problem-Solver
-        </span>
-      </div>
-
-      <div class="about-stats">
-        <div class="stat-card">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Projects</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">6+</span>
-          <span class="stat-label">Technologies</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">∞</span>
-          <span class="stat-label">Learning</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: TEXT -->
-    <div class="about-content reveal">
-      <p class="eyebrow">About Me</p>
-      <h2>Bridging software engineering with intuitive design.</h2>
-
-      <p class="about-lead">
-        I’m a Software Engineering undergraduate passionate about creating seamless digital experiences. I combine strong full-stack development skills with UI/UX sensibilities to turn complex problems into simple, effective solutions.
-      </p>
-
-      <p>
-        Experienced in MERN stack (MongoDB, Express.js, React.js, Node.js), Java, Spring Boot, and Android development, I’ve built scalable systems including hospital, event, and finance management platforms. I thrive in collaborative environments, focusing on reusable components, clean architecture, and intuitive interfaces.
-      </p>
-
-      <div class="chips">
-        <span class="chip">MERN Stack</span>
-        <span class="chip">Java & Spring Boot</span>
-        <span class="chip">Android Studio</span>
-        <span class="chip">UI/UX Design</span>
-        <span class="chip">RESTful APIs</span>
-        <span class="chip">Database Design</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-           <!-- ===== RUNNING ANNOUNCEMENT BANNER ===== -->
-<div class="announcement-banner reveal">
-  <div class="announcement-inner sonoma-glass">
-    <div class="banner-track sonoma-track">
-      <span>⚙️ Full-Stack Software Engineer</span>
-      <span>🚀 React • Node.js • MongoDB • REST APIs</span>
-      <span>🧠 Clean architecture & scalable systems</span>
-      <span>⚡ Performance-focused, production-ready code</span>
-
-      <span>⚙️ Full-Stack Software Engineer</span>
-      <span>🚀 React • Node.js • MongoDB • REST APIs</span>
-      <span>🧠 Clean architecture & scalable systems</span>
-      <span>⚡ Performance-focused, production-ready code</span>
-    </div>
-  </div>
-</div>
-
-        <section id="skills" class="section section-skills">
-  <div class="skills-shell">
-    <header class="skills-header reveal">
-      <p class="eyebrow">Skills</p>
-      <h2>Full-Stack & Design Expertise</h2>
-      <p class="skills-sub">
-        Combining software engineering, UI/UX design, and modern development tools to build scalable, polished products.
-      </p>
-    </header>
-
-    <div class="skills-layout">
-      <!-- LEFT: main skill meters -->
-      <div class="skills-list">
-         <div class="skill-row reveal">
-          <span class="skill-name">Frontend Development</span>
-          <div class="skill-meter">
-            <div class="skill-meter-fill" style="--level: 0.92;"></div>
-          </div>
-          <span class="skill-level">Expert</span>
-        </div>
-
-        <div class="skill-row reveal">
-          <span class="skill-name">UI / UX Design</span>
-          <div class="skill-meter">
-            <div class="skill-meter-fill" style="--level: 0.88;"></div>
-          </div>
-          <span class="skill-level">Advanced</span>
-        </div>
-
-        <div class="skill-row reveal">
-          <span class="skill-name">Backend Development</span>
-          <div class="skill-meter">
-            <div class="skill-meter-fill" style="--level: 0.84;"></div>
-          </div>
-          <span class="skill-level">Advanced</span>
-        </div>
-
-        <div class="skill-row reveal">
-          <span class="skill-name">Mobile App Development</span>
-          <div class="skill-meter">
-            <div class="skill-meter-fill" style="--level: 0.80;"></div>
-          </div>
-          <span class="skill-level">Strong</span>
-        </div>
-
-        <div class="skill-row reveal">
-          <span class="skill-name">Database Design</span>
-          <div class="skill-meter">
-            <div class="skill-meter-fill" style="--level: 0.82;"></div>
-          </div>
-          <span class="skill-level">Advanced</span>
-        </div>
-
-        <div class="skill-row reveal">
-          <span class="skill-name">Version Control & DevOps</span>
-          <div class="skill-meter">
-            <div class="skill-meter-fill" style="--level: 0.70;"></div>
-          </div>
-          <span class="skill-level">Intermediate</span>
-        </div>
-      </div>
-
-      <!-- RIGHT: chips / categories -->
-      <div class="skills-chips">
-        <div class="chip-cluster reveal">
-          <p class="cluster-label">Programming</p>
-          <div class="chip-cloud">
-            <span class="skill-chip">Java</span>
-            <span class="skill-chip">JavaScript</span>
-            <span class="skill-chip">Python</span>
-            <span class="skill-chip">C</span>
-            <span class="skill-chip">Kotlin</span>
-          </div>
-        </div>
-
-        <div class="chip-cluster reveal">
-          <p class="cluster-label">Frontend</p>
-          <div class="chip-cloud">
-            <span class="skill-chip">React.js</span>
-            <span class="skill-chip">Next.js</span>
-            <span class="skill-chip">HTML5</span>
-            <span class="skill-chip">CSS3 / SCSS</span>
-            <span class="skill-chip">Tailwind</span>
-          </div>
-        </div>
-
-        <div class="chip-cluster reveal">
-          <p class="cluster-label">Backend & Database</p>
-          <div class="chip-cloud">
-            <span class="skill-chip">Node.js</span>
-            <span class="skill-chip">Express.js</span>
-            <span class="skill-chip">Spring Boot</span>
-            <span class="skill-chip">PHP</span>
-            <span class="skill-chip">MongoDB</span>
-            <span class="skill-chip">MySQL</span>
-            <span class="skill-chip">SQLite</span>
-            <span class="skill-chip">RESTful APIs</span>
-            <span class="skill-chip">MVC Architecture</span>
-          </div>
-        </div>
-
-        <div class="chip-cluster reveal">
-          <p class="cluster-label">Mobile Development</p>
-          <div class="chip-cloud">
-            <span class="skill-chip">Android Studio</span>
-            <span class="skill-chip">XML Layouts</span>
-            <span class="skill-chip">Kotlin</span>
-          </div>
-        </div>
-
-        <div class="chip-cluster reveal">
-          <p class="cluster-label">Version Control & DevOps</p>
-          <div class="chip-cloud">
-            <span class="skill-chip">Git / GitHub</span>
-            <span class="skill-chip">AWS (Beginner)</span>
-            <span class="skill-chip">CI/CD (Basic)</span>
-          </div>
-        </div>
-
-        <div class="chip-cluster reveal">
-          <p class="cluster-label">Tools</p>
-          <div class="chip-cloud">
-            <span class="skill-chip">VS Code</span>
-            <span class="skill-chip">IntelliJ IDEA</span>
-            <span class="skill-chip">Jira</span>
-            <span class="skill-chip">Postman</span>
+          <div class="about-right reveal">
+            <p>
+              I’m a Software Engineering undergraduate passionate about creating seamless digital experiences.
+              I combine strong full-stack development skills with UI/UX sensibilities to turn complex problems into simple, effective solutions.
+            </p>
+            <p>
+              Experienced in MERN stack (MongoDB, Express.js, React.js, Node.js), Java, Spring Boot, and Android development,
+              I’ve built scalable systems including hospital, event, and finance management platforms.
+              I thrive in collaborative environments, focusing on reusable components, clean architecture, and intuitive interfaces.
+            </p>
+
+            <div class="chip-row">
+              <span class="chip">MERN Stack</span>
+              <span class="chip">Java & Spring Boot</span>
+              <span class="chip">Android Studio</span>
+              <span class="chip">UI/UX Design</span>
+              <span class="chip">RESTful APIs</span>
+              <span class="chip">Database Design</span>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- WORK (your same projects, editorial cards) -->
+    <section id="work" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Selected Projects</h2>
+          <p>Projects showcasing my software engineering skills across web, mobile, and full-stack development.</p>
+        </header>
+
+        <div class="work-grid">
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample1.jpg')"></div>
+            <div class="work-body">
+              <h3>Online Auction Platform</h3>
+              <p>Full-featured web platform enabling product bidding and selling with secure user authentication and intuitive UI.</p>
+              <div class="tag-row">
+                <span class="tag">PHP</span><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span>
+              </div>
+              <div class="link-row">
+                <a href="https://auction-six-eosin.vercel.app/" target="_blank" rel="noopener">Live Site →</a>
+                <a href="https://github.com/Vanaiyalini/auction" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample2.jpg')"></div>
+            <div class="work-body">
+              <h3>Event Management System</h3>
+              <p>Dynamic web application for event creation, booking management, and portfolio showcasing using Java technologies.</p>
+              <div class="tag-row">
+                <span class="tag">Java</span><span class="tag">JSP/Servlets</span>
+              </div>
+              <div class="link-row">
+                <a href="https://github.com/Vanaiyalini/EventManagement-project" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample3.jpg')"></div>
+            <div class="work-body">
+              <h3>Hospital Management System</h3>
+              <p>Full-stack MERN application for patient, doctor, billing, and support management with secure authentication and payment integration.</p>
+              <div class="tag-row">
+                <span class="tag">MongoDB</span><span class="tag">Express.js</span><span class="tag">React.js</span><span class="tag">Node.js</span>
+              </div>
+              <div class="link-row">
+                <a href="https://hospitalsusyemitp.vercel.app/" target="_blank" rel="noopener">Live Site →</a>
+                <a href="https://github.com/Vanaiyalini/ITP" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample4.jpg')"></div>
+            <div class="work-body">
+              <h3>Finance Tracker App</h3>
+              <p>Mobile app to track income, expenses, and monthly budgets with local SQLite storage and user-friendly interfaces.</p>
+              <div class="tag-row">
+                <span class="tag">Android Studio</span><span class="tag">SQLite</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample5.jpg')"></div>
+            <div class="work-body">
+              <h3>Pet Adoption Shop</h3>
+              <p>UI/UX prototype and Android implementation for pet adoption with intuitive navigation and functional screens.</p>
+              <div class="tag-row">
+                <span class="tag">Figma</span><span class="tag">Android (XML)</span>
+              </div>
+              <div class="link-row">
+                <a href="https://www.figma.com/design/lM5wVnTXXVM2e6QxPfxSIA/PawPal?node-id=0-1&p=f" target="_blank" rel="noopener">Live Site →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample6.jpg')"></div>
+            <div class="work-body">
+              <h3>Task Management App</h3>
+              <p>Full-stack task management application with CRUD functionality, task prioritization, and responsive React UI.</p>
+              <div class="tag-row">
+                <span class="tag">MongoDB</span><span class="tag">Express.js</span><span class="tag">React.js</span><span class="tag">Node.js</span>
+              </div>
+              <div class="link-row">
+                <a href="https://tasktrail-ten.vercel.app/" target="_blank" rel="noopener">Live Site →</a>
+                <a href="https://github.com/Vanaiyalini/TaskTrail" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-img" style="background-image:url('assets/sample7.jpg')"></div>
+            <div class="work-body">
+              <h3>Smart Wastage Management System</h3>
+              <p>Web-based system for waste collection and tracking with real-time data processing, automated notifications, and payment gateway integration.</p>
+              <div class="tag-row">
+                <span class="tag">Spring Boot</span><span class="tag">React.js</span><span class="tag">Payments</span>
+              </div>
+              <div class="link-row">
+                <a href="https://wastagemanagementsystem.vercel.app/" target="_blank" rel="noopener">Live Site →</a>
+                <a href="https://github.com/Vanaiyalini/WastageManagementSystem" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY (keep your images, just editorial grid) -->
+    <section id="gallery" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Design Creations</h2>
+          <p>UI/UX and website designs — presented in a clean editorial grid.</p>
+        </header>
+
+        <div class="gallery-controls reveal" role="tablist" aria-label="Gallery filters">
+          <button class="gfilter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="gfilter" data-filter="wedding" role="tab" aria-selected="false">UI & UX Designs</button>
+          <button class="gfilter" data-filter="birthday" role="tab" aria-selected="false">Web Designs</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <!-- Your same images (unchanged paths) -->
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Home-page.png" alt="UI/UX 1" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Login-or-Registration-page.png" alt="UI/UX 2" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/w5.png" alt="Web 1" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Onboarding-Page.png" alt="UI/UX 3" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Pet-Adoption-page.png" alt="UI/UX 4" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/w6.png" alt="Web 2" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Registration-page.png" alt="UI/UX 5" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/eventManagement.png" alt="Web 3" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/h2.png" alt="Web 4" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/h3.png" alt="Web 5" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/h4.png" alt="Web 6" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/hospitalManagement.png" alt="Web 7" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/w2.png" alt="Web 8" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Appointment.png" alt="UI/UX 6" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Homepage.png" alt="UI/UX 7" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Login.png" alt="UI/UX 8" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/MedicalRecords.png" alt="UI/UX 9" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="wedding"><img src="assets/UI & UX Design/Profilepage.png" alt="UI/UX 10" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/w3.png" alt="Web 9" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/w4.png" alt="Web 10" loading="lazy"></figure>
+          <figure class="gitem reveal" data-category="birthday"><img src="assets/Website design/wastageManagement.png" alt="Web 11" loading="lazy"></figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+      <img id="lbImg" alt="Preview" />
     </div>
-  </div>
-</section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Skills</h2>
+          <p>Full-stack + design expertise presented in a clean editorial list.</p>
+        </header>
 
+        <div class="skills-grid reveal">
+          <div class="skill">
+            <div class="skill-top">
+              <span>Frontend Development</span><span class="skill-r">Expert</span>
+            </div>
+            <div class="bar"><i style="--w:92%"></i></div>
+          </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section-contact">
-  <div class="section-header reveal">
-    <h2>Let’s Work Together</h2>
-    <p>Have a product, feature, or idea in mind? I’d love to help you bring it to life.</p>
-  </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>UI / UX Design</span><span class="skill-r">Advanced</span>
+            </div>
+            <div class="bar"><i style="--w:88%"></i></div>
+          </div>
 
-  <div class="contact-grid">
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/xovgnzyy" method="POST" class="contact-form reveal">
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required />
+          <div class="skill">
+            <div class="skill-top">
+              <span>Backend Development</span><span class="skill-r">Advanced</span>
+            </div>
+            <div class="bar"><i style="--w:84%"></i></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top">
+              <span>Mobile App Development</span><span class="skill-r">Strong</span>
+            </div>
+            <div class="bar"><i style="--w:80%"></i></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top">
+              <span>Database Design</span><span class="skill-r">Advanced</span>
+            </div>
+            <div class="bar"><i style="--w:82%"></i></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top">
+              <span>Version Control & DevOps</span><span class="skill-r">Intermediate</span>
+            </div>
+            <div class="bar"><i style="--w:70%"></i></div>
+          </div>
+        </div>
+
+        <div class="skill-chips reveal">
+          <span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">C</span><span class="chip">Kotlin</span>
+          <span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Tailwind</span>
+          <span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Spring Boot</span><span class="chip">PHP</span>
+          <span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">RESTful APIs</span><span class="chip">MVC</span>
+          <span class="chip">Git / GitHub</span><span class="chip">AWS (Beginner)</span><span class="chip">CI/CD (Basic)</span>
+          <span class="chip">VS Code</span><span class="chip">IntelliJ</span><span class="chip">Jira</span><span class="chip">Postman</span>
+        </div>
       </div>
+    </section>
 
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+    <!-- CONTACT (same Formspree endpoint) -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Contact</h2>
+          <p>Have a product, feature, or idea in mind? Let’s build it.</p>
+        </header>
+
+        <div class="contact-grid">
+          <form action="https://formspree.io/f/xovgnzyy" method="POST" class="contact-card reveal" id="contactForm">
+            <label>
+              Name
+              <input name="name" type="text" placeholder="Your name" required />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" placeholder="you@example.com" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell me a bit about your project" required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send Message</button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+
+          <div class="contact-side reveal">
+            <h3>Elsewhere</h3>
+            <p>Find more of my work here:</p>
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/vanaiyalini-kirupagaran-743923269/">LinkedIn →</a>
+            <a target="_blank" rel="noopener" href="https://github.com/Vanaiyalini">GitHub →</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about your project" required></textarea>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span>© 2026 Vanaiyalini Kirupagaran</span>
+        <span class="dot-sep">•</span>
+        <span>Minimal portfolio</span>
       </div>
-
-      <button type="submit" class="btn btn-primary">Send Message</button>
-      <p class="form-note" id="form-note"></p>
-    </form>
-
-    <!-- Contact Meta / Socials -->
-    <div class="contact-meta reveal">
-      <h3>Elsewhere</h3>
-      <p>Find more of my work and experiments here:</p>
-
-      <ul class="social-links">
-        <li>
-          <a href="https://www.linkedin.com/in/vanaiyalini-kirupagaran-743923269/" class="social-pill-label" target="_blank" rel="noopener noreferrer">
-            <img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn Logo" />
-            <span>LinkedIn</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Vanaiyalini" class="social-pill-label" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub Logo" />
-            <span>GitHub</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+    </footer>
 
   </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2026 Vanaiyalini Kirupagaran. Designed with care.</p>
-  </footer>
-
-  
-   
 
 </body>
 </html>
